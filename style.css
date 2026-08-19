@@ -101,9 +101,8 @@ h1 {
 /* Hero Section */
 .hero {
     display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .hero img {
