@@ -1,0 +1,172 @@
+/* Base */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0f0a; /* dark swampy green */
+    font-family: "Orbitron", Arial, sans-serif;
+    color: #e6f7c2; /* pale yellow-green */
+}
+
+/* Datapad Frame */
+.datapad-frame {
+    width: 90%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1a1f14; /* muddy green-brown */
+    border: 4px solid #7fa32a; /* Hutt gold-green */
+    border-radius: 20px;
+    box-shadow: 0 0 25px #7fa32a;
+    position: relative;
+}
+
+/* Slime drips on frame */
+.datapad-frame::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 20%;
+    width: 60%;
+    height: 20px;
+    background: radial-gradient(circle, #9bbf3c 0%, transparent 70%);
+    filter: blur(4px);
+    opacity: 0.4;
+}
+
+/* Screen Area */
+.screen {
+    background: #0f140d; /* deep swamp green */
+    border: 2px solid #3f4a2a;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Scanlines */
+.screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+/* Slimy sheen overlay */
+.screen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,200,0.05),
+        rgba(255,255,150,0.08),
+        rgba(0,0,0,0)
+    );
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #c9e46b; /* Hutt gold */
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    color: #b5d46a;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 180px;
+    border-radius: 10px;
+    border: 2px solid #8fa83c;
+    box-shadow: 0 0 10px #8fa83c;
+}
+
+/* Bio */
+.bio {
+    max-width: 450px;
+    color: #e6f7c2;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.main-nav a {
+    color: #d4f28a;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #8fa83c;
+    border-radius: 6px;
+    background: rgba(80, 100, 40, 0.2);
+    transition: 0.2s;
+}
+
+.main-nav a:hover {
+    background: #b5d46a;
+    color: #1a1f14;
+}
+
+/* Log Entries */
+.log-list {
+    margin: 2rem auto;
+    max-width: 700px;
+}
+
+.log-entry {
+    background: #1d2416; /* murky green */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #9bbf3c; /* slime green */
+    border-radius: 6px;
+    box-shadow: 0 0 10px #7fa32a55;
+}
+
+.log-entry h2 {
+    margin-top: 0;
+    color: #c9e46b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #b5d46a;
+    font-size: 0.8rem;
+}
