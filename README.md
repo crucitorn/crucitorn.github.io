@@ -16,7 +16,7 @@
             </header>
 
             <section class="hero">
-                <img src="images/avatar.png" alt="Character Portrait">
+                <img src="main/images/avatar.png" alt="Character Portrait">
                 <div class="bio">
                     <h2>Overview</h2>
                     <p>
